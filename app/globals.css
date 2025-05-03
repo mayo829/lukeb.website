@@ -1,0 +1,72 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-cyan-100 antialiased;
+  }
+}
+
+/* Custom animations */
+@layer utilities {
+  /* Wave animation - matches the HeroSection wave movement */
+  .animate-wave-flow {
+    animation: wave-flow 20s linear infinite;
+  }
+  
+  @keyframes wave-flow {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  /* Consistent bounce animation for all interactive elements */
+  .animate-soft-bounce {
+    animation: soft-bounce 2s infinite;
+  }
+  
+  @keyframes soft-bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  /* Glassmorphism effect - used across components */
+  .glass-effect {
+    @apply bg-cyan-900/40 backdrop-blur-sm border border-cyan-800/50;
+  }
+  
+  .glass-effect-hover {
+    @apply hover:bg-cyan-800/60 hover:border-cyan-400/50;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection colors */
+::selection {
+  @apply bg-cyan-400/30 text-cyan-100;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-cyan-900/50 rounded-full hover:bg-cyan-800/60;
+}
