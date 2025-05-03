@@ -59,7 +59,7 @@ export default function DocumentsPage() {
                 y: -5,
                 backgroundColor: 'rgba(34, 211, 238, 0.05)'
               }}
-              className="bg-white/5 rounded-xl p-6 border border-cyan-900/30 hover:border-cyan-400/40 transition-all"
+              className="bg-white/5 rounded-xl p-6 border border-cyan-900/30 hover:border-cyan-400/40"
             >
               <div className="flex flex-col items-center text-center">
                 <div className="text-cyan-400 mb-4">
