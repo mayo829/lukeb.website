@@ -8,9 +8,10 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+      // ... existing colors
+      fontFamily: {
+        bodoni: ['var(--font-bodoni)'], // Primary font
+        mono: ['var(--font-mono)'],     // Only keep what you need
       },
     },
   },

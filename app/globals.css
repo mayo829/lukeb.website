@@ -3,8 +3,13 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --font-bodoni: var(--font-bodoni-egyptian), serif;
+    --font-mono: var(--font-geist-mono), monospace;
+  }
+  
   body {
-    @apply bg-black text-cyan-100 antialiased;
+    font-family: var(--font-bodoni);
   }
 }
 

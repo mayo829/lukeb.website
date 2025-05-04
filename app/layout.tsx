@@ -1,6 +1,13 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
+import localFont from 'next/font/local';
 import './globals.css';
+
+const bodoniEgyptian = localFont({
+	src: '../public/fonts/DiagraphEtc-Light.otf',
+	variable: '--font-bodoni-egyptian',
+	display: 'swap',
+  });
 
 const geistSans = Geist({
 	variable: '--font-geist-sans',
@@ -11,6 +18,7 @@ const geistMono = Geist_Mono({
 	variable: '--font-geist-mono',
 	subsets: ['latin'],
 });
+
 
 export const metadata: Metadata = {
 	title: 'Luke Brzozowski - Computer Engineer',
@@ -83,12 +91,14 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+  }: {
+	children: React.ReactNode
+  }) {
 	return (
-		<html lang="en">
-			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>{children}</body>
-		</html>
+	  <html lang="en" className={`${bodoniEgyptian.variable} ${geistMono.variable}`}>
+		<body className="font-bodoni antialiased"> {/* Changed to font-bodoni */}
+		  {children}
+		</body>
+	  </html>
 	);
-}
+  }
