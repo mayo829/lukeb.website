@@ -21,7 +21,7 @@ export default function HeroSection() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
-      className="h-screen flex items-center justify-center relative overflow-hidden bg-[#0d0d0d]"
+      className="h-screen flex items-center justify-center relative overflow-hidden bg-[#000000]"
     >
       {/* Restored Background Animation */}
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -34,7 +34,7 @@ export default function HeroSection() {
           <defs>
             <linearGradient id="bgGradient" x1="0" y1="0" x2="1" y2="1">
               <stop offset="0%" stopColor="#0d0d0d" />
-              <stop offset="100%" stopColor="#1a1a1a" />
+              <stop offset="100%" stopColor="#000000" />
             </linearGradient>
           </defs>
           <rect width="100%" height="100%" fill="url(#bgGradient)" />

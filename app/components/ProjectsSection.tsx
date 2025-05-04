@@ -19,21 +19,37 @@ const projects = [
     description: 'Machine Learning based classifier for online forum posts',
     image: '/code.jpg',
     link: 'https://www.example.com',
-    github: 'https://github.com',
+    github: 'https://github.com/mayo829/piazza_post_categorizer',
   },
   {
     id: 3,
     title: 'NASA Mars Rover (Prototype)',
     description: 'Prototype of NASA Mars Rover with collision avoidance and robotic arm',
-    image: '/code.jpg',
+    image: '/arduino.jpg',
     link: 'https://www.example.com',
-    github: 'https://github.com',
+    github: 'https://github.com/mayo829',
+  },
+  {
+    id: 4,
+    title: 'Accelerometer Data Logger',
+    description: 'Real-time 3-axis acceleration data logger with cloud upload',
+    image: '/circuit.jpg',
+    link: 'https://www.example.com',
+    github: 'https://github.com/mayo829',
+  },
+  {
+    id: 5,
+    title: 'Venturi Design and Simulation',
+    description: 'CFD simulations of variable Venturi geometries for optimized airflow',
+    image: '/CFD.jpg',
+    link: 'https://www.solidworks.com/',
+    github: 'https://github.com/mayo829',
   },
 ];
 
 export default function ProjectsSection() {
   return (
-    <section className="py-12 md:py-20 px-4 max-w-7xl mx-auto bg-gradient-to-b from-black to-blue-900/10">
+    <section className="py-12 md:py-20 px-4 max-w-7xl mx-auto">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
