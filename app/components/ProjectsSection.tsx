@@ -16,7 +16,7 @@ const projects = [
   {
     id: 2,
     title: 'Piazza Post Categorizer',
-    description: 'ML-based classifier for online forum posts (Piazza)',
+    description: 'Machine Learning based classifier for online forum posts',
     image: '/code.jpg',
     link: 'https://www.example.com',
     github: 'https://github.com',
