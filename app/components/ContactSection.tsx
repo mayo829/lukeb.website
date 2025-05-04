@@ -13,7 +13,7 @@ export default function ContactSection() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
         >
-          Get In Touch
+          Contact Me
         </motion.h2>
 
         <LocationInfo />
@@ -52,7 +52,7 @@ const ContactButtons = () => (
     <ContactButton 
       href="mailto:lbrzozow@umich.edu" 
       iconPath="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"
-      text="Contact"
+      text="Email"
     />
     <ContactButton 
       href="/resume.pdf" 
