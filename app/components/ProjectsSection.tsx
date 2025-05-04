@@ -23,7 +23,7 @@ const projects = [
   },
   {
     id: 3,
-    title: 'NASA Mars Rover (Prototype)',
+    title: 'NASA Mars Rover',
     description: 'Prototype of NASA Mars Rover with collision avoidance and robotic arm',
     image: '/arduino.jpg',
     link: 'https://www.example.com',
