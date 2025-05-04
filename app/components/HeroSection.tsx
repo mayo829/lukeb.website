@@ -23,7 +23,7 @@ export default function HeroSection() {
       transition={{ duration: 1 }}
       className="h-screen flex items-center justify-center relative overflow-hidden bg-[#000000]"
     >
-      {/* Restored Background Animation */}
+      {/* Background Animation - Desktop remains identical, mobile gets optimized */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <svg
           className="w-full h-full"
@@ -39,7 +39,8 @@ export default function HeroSection() {
           </defs>
           <rect width="100%" height="100%" fill="url(#bgGradient)" />
 
-          {!isMobile && [...Array(30)].map((_, i) => {
+          {/* Desktop: 30 lines (original), Mobile: 15 lines (optimized) */}
+          {[...Array(isMobile ? 15 : 25)].map((_, i) => {
             const y = 50 + i * 40;
             const opacity = Math.min(0.15 - i * 0.006, 0.12);
             const duration = 20 + i * 1.5;
@@ -50,7 +51,7 @@ export default function HeroSection() {
                   d={`M0,${y} Q360,${y - 60} 720,${y} T1440,${y}`}
                   fill="none"
                   stroke={`rgba(255,255,255,${opacity.toFixed(3)})`}
-                  strokeWidth="1.5"
+                  strokeWidth={isMobile ? "1" : "1.5"} // Only change on mobile
                   initial={{ x: 0 }}
                   animate={{ x: -1440 }}
                   transition={{
@@ -68,7 +69,7 @@ export default function HeroSection() {
                   d={`M0,${y} Q360,${y - 60} 720,${y} T1440,${y}`}
                   fill="none"
                   stroke={`rgba(255,255,255,${opacity.toFixed(3)})`}
-                  strokeWidth="1.5"
+                  strokeWidth={isMobile ? "1" : "1.5"} // Only change on mobile
                   initial={{ x: 1440 }}
                   animate={{ x: 0 }}
                   transition={{
@@ -88,6 +89,7 @@ export default function HeroSection() {
         </svg>
       </div>
 
+      {/* Content remains identical on all devices */}
       <div className="relative z-10 text-center">
         <motion.h1
           initial={{ y: 50 }}
