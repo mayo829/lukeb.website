@@ -40,7 +40,7 @@ export default function SkillsSection() {
               }}
               className="bg-white/5 rounded-lg p-3 md:p-4 text-center border border-cyan-900/30 hover:border-cyan-400/50 transition-colors duration-100"
             >
-              <h3 className="text-sm md:text-base font-medium text-cyan-100 whitespace-nowrap">
+              <h3 className="text-sm md:text-base font-medium white whitespace-nowrap">
                 {skill}
               </h3>
             </motion.div>
