@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 // import { Geist, Geist_Mono } from 'next/font/google';
 import { Geist_Mono } from 'next/font/google';
+import { Analytics } from '@vercel/analytics/next';
 
 import localFont from 'next/font/local';
 import './globals.css';
@@ -100,6 +101,7 @@ export default function RootLayout({
 	  <html lang="en" className={`${bodoniEgyptian.variable} ${geistMono.variable}`}>
 		<body className="font-bodoni antialiased"> {/* Changed to font-bodoni */}
 		  {children}
+		  <Analytics />
 		</body>
 	  </html>
 	);
