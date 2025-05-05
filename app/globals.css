@@ -8,7 +8,9 @@
     --font-mono: var(--font-geist-mono), monospace;
   }
   
-  body {
+  html, body {
+    height: 100%;
+    margin: 0;
     font-family: var(--font-bodoni);
     background-color: #000;
   }
