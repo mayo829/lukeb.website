@@ -32,7 +32,7 @@ const LocationInfo = () => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "0px 0px -100px 0px" }}
     transition={{ duration: 0.6, delay: 0.3 }}
-    className="flex items-center justify-center gap-2 text-cyan-200 mb-8"
+    className="flex items-center justify-center gap-2 text-white mb-8"
   >
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
@@ -67,7 +67,7 @@ const ContactButton = ({ href, iconPath, text, target }: { href: string; iconPat
   <a
     href={href}
     target={target}
-    className="group flex items-center gap-2 px-6 py-3 bg-cyan-900/40 hover:bg-cyan-800/60 text-cyan-100 rounded-full transition-all duration-100 border border-cyan-800/50 hover:border-cyan-400/50 w-full sm:w-auto"
+    className="group flex items-center gap-2 px-6 py-3 bg-cyan-900/40 hover:bg-cyan-800/60 text-white rounded-full transition-all duration-100 border border-cyan-800/50 hover:border-cyan-400/50 w-full sm:w-auto"
   >
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
       <path d={iconPath} />

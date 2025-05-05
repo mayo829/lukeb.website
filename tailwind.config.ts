@@ -8,10 +8,9 @@ export default {
   ],
   theme: {
     extend: {
-      // ... existing colors
       fontFamily: {
-        bodoni: ['var(--font-bodoni)'], // Primary font
-        mono: ['var(--font-mono)'],     // Only keep what you need
+        bodoni: ['var(--font-bodoni)'],
+        mono: ['var(--font-mono)'],
       },
     },
   },

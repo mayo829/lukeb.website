@@ -10,6 +10,7 @@
   
   body {
     font-family: var(--font-bodoni);
+    background-color: #000;
   }
 }
 
