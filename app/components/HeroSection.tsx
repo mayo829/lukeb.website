@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 
 export default function HeroSection() {
   const [isMobile, setIsMobile] = useState(false);
-  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   
   // Motion values for tilt effect
   const x = useMotionValue(0);
@@ -25,10 +24,6 @@ export default function HeroSection() {
     
     // Track cursor position
     const handleMouseMove = (e: MouseEvent) => {
-      setCursorPosition({
-        x: e.clientX / window.innerWidth - 0.5,
-        y: e.clientY / window.innerHeight - 0.5
-      });
       x.set(e.clientX / window.innerWidth - 0.5);
       y.set(e.clientY / window.innerHeight - 0.5);
     };
@@ -178,7 +173,7 @@ export default function HeroSection() {
             className="p-2 bg-cyan-900/40 hover:bg-cyan-800/60 rounded-full transition-all duration-200 border border-cyan-800/50 hover:border-cyan-400/50"
           >
             <svg 
-              className="w-6 h-6 text-cyan-100" 
+              className="w-6 h-6 white" 
               fill="none" 
               stroke="currentColor" 
               viewBox="0 0 24 24" 
