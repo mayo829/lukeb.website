@@ -1,10 +1,19 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useMotionValue, useTransform } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
 export default function HeroSection() {
   const [isMobile, setIsMobile] = useState(false);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  
+  // Motion values for tilt effect
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
+  
+  // Transform motion values for tilt
+  const rotateX = useTransform(y, [-0.5, 0.5], [5, -5]); // Reduced from 10 to 5 for subtlety
+  const rotateY = useTransform(x, [-0.5, 0.5], [-5, 5]); // Reduced from 10 to 5 for subtlety
 
   useEffect(() => {
     const checkMobile = () => {
@@ -13,8 +22,24 @@ export default function HeroSection() {
     
     checkMobile();
     window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
+    
+    // Track cursor position
+    const handleMouseMove = (e: MouseEvent) => {
+      setCursorPosition({
+        x: e.clientX / window.innerWidth - 0.5,
+        y: e.clientY / window.innerHeight - 0.5
+      });
+      x.set(e.clientX / window.innerWidth - 0.5);
+      y.set(e.clientY / window.innerHeight - 0.5);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
+    return () => {
+      window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('mousemove', handleMouseMove);
+    };
+  }, [x, y]);
 
   return (
     <motion.section
@@ -51,7 +76,7 @@ export default function HeroSection() {
                   d={`M0,${y} Q360,${y - 60} 720,${y} T1440,${y}`}
                   fill="none"
                   stroke={`rgba(255,255,255,${opacity.toFixed(3)})`}
-                  strokeWidth={isMobile ? "1" : "1.5"} // Only change on mobile
+                  strokeWidth={isMobile ? "1" : "1.5"}
                   initial={{ x: 0 }}
                   animate={{ x: -1440 }}
                   transition={{
@@ -69,7 +94,7 @@ export default function HeroSection() {
                   d={`M0,${y} Q360,${y - 60} 720,${y} T1440,${y}`}
                   fill="none"
                   stroke={`rgba(255,255,255,${opacity.toFixed(3)})`}
-                  strokeWidth={isMobile ? "1" : "1.5"} // Only change on mobile
+                  strokeWidth={isMobile ? "1" : "1.5"}
                   initial={{ x: 1440 }}
                   animate={{ x: 0 }}
                   transition={{
@@ -96,6 +121,17 @@ export default function HeroSection() {
           animate={{ y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
+          style={{
+            rotateX,
+            rotateY,
+            transformPerspective: 1000,
+            transformStyle: "preserve-3d",
+            transition: "transform 0.1s linear" // Add this for smoother movement
+          }}
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.2 } // Make hover faster
+          }}
         >
           Luke Brzozowski
         </motion.h1>

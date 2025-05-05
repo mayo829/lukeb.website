@@ -78,3 +78,38 @@ html {
 ::-webkit-scrollbar-thumb {
   @apply bg-cyan-900/50 rounded-full hover:bg-cyan-800/60;
 }
+
+@layer utilities {
+  .deep-3d-text {
+    background: linear-gradient(to bottom, #22d3ee, #3b82f6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    position: relative;
+    display: inline-block;
+    transform-style: preserve-3d;
+    text-shadow: 
+      0 1px 0 #d1d1d1,
+      0 2px 0 #c7c7c7,
+      0 3px 0 #bdbdbd,
+      0 4px 0 #b3b3b3,
+      0 5px 0 #a9a9a9,
+      0 6px 0 #9f9f9f,
+      0 7px 5px rgba(0,0,0,0.3),
+      0 10px 10px rgba(0,0,0,0.2);
+  }
+
+  .deep-3d-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3));
+    transform: rotateX(-80deg);
+    transform-origin: bottom center;
+    opacity: 0.8;
+    filter: blur(2px);
+  }
+}
