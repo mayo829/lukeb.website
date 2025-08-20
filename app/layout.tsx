@@ -1,27 +1,41 @@
 import type { Metadata } from 'next';
 // import { Geist, Geist_Mono } from 'next/font/google';
-import { Geist_Mono } from 'next/font/google';
+import { Share_Tech_Mono, JetBrains_Mono, Inter } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
 
 import localFont from 'next/font/local';
 import './globals.css';
 
+const inter = Inter({
+	weight: ['400', '500', '600', '700'],
+	subsets: ['latin'],
+	variable: '--font-inter',
+});
+
 const bodoniEgyptian = localFont({
 	src: '../public/fonts/DiagraphEtc-Light.otf',
 	variable: '--font-bodoni-egyptian',
 	display: 'swap',
-  });
+});
+
+const jetbrainsMono = JetBrains_Mono({
+	weight: ['400', '500', '600', '700'], // Multiple weights available
+	subsets: ['latin'],
+	variable: '--font-jetbrains-mono',
+	display: 'swap',
+});
 
 // const geistSans = Geist({
 // 	variable: '--font-geist-sans',
 // 	subsets: ['latin'],
 // });
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
-});
-
+// const shareTechMono = Share_Tech_Mono({
+// 	weight: '400', // Share Tech Mono only has 400 weight
+// 	subsets: ['latin'],
+// 	variable: '--font-share-tech-mono', // Add this for CSS variable
+// 	display: 'swap',
+// });
 
 export const metadata: Metadata = {
 	title: 'Luke Brzozowski - Computer Engineer',
@@ -94,15 +108,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
 	children,
-  }: {
+}: {
 	children: React.ReactNode
-  }) {
+}) {
 	return (
-	  <html lang="en" className={`${bodoniEgyptian.variable} ${geistMono.variable}`}>
-		<body className="font-bodoni antialiased"> {/* Changed to font-bodoni */}
-		  {children}
-		  <Analytics />
-		</body>
-	  </html>
+		<html lang="en" className={`${inter.variable} ${bodoniEgyptian.variable} ${jetbrainsMono.variable}`}>
+			<body className={`${jetbrainsMono.className} antialiased`}>
+				{children}
+				<Analytics />
+			</body>
+		</html>
 	);
-  }
+}

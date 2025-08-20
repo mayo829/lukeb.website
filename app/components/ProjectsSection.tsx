@@ -55,7 +55,7 @@ export default function ProjectsSection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6 }}
-        className="text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
+        className="font-inter text-3xl md:text-4xl font-bold mb-8 md:mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
       >
         Featured Projects
       </motion.h2>
@@ -80,8 +80,8 @@ export default function ProjectsSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" /> 
             <div className="absolute inset-0 p-6 flex flex-col justify-end">
-              <h3 className="text-xl font-bold mb-2 text-cyan-50">{project.title}</h3>
-              <p className="text-cyan-100 mb-4">{project.description}</p>
+              <h3 className="font-inter text-xl font-bold mb-2 text-cyan-50">{project.title}</h3>
+              <p className="font-inter text-cyan-100 mb-4">{project.description}</p>
               <div className="flex gap-4">
                 <Link 
                   href={project.link || "#"} 

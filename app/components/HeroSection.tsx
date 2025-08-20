@@ -115,7 +115,7 @@ export default function HeroSection() {
           initial={{ y: 50 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-7xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
+          className="text-4xl md:text-7xl font-inter font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500"
           style={{
             rotateX,
             rotateY,

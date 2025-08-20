@@ -10,7 +10,10 @@ export default {
     extend: {
       fontFamily: {
         bodoni: ['var(--font-bodoni)'],
-        mono: ['var(--font-mono)'],
+        inter: ['var(--font-inter)'],
+        // mono: ['var(--font-mono)'],
+        mono: ['var(--font-jetbrains-mono)']
+        // hacker: ['var(--font-share-tech-mono)']
       },
     },
   },
