@@ -42,6 +42,7 @@ export const metadata: Metadata = {
 	description:
 		'Welcome to my portfolio! I am a passionate Computer Engineer with a focus on clean, minimal, and effective solutions. I believe in the power of simplicity and thoughtful design to create impactful digital experiences.',
 	keywords: [
+		'Luke Brzozowski',
 		'Computer Engineer',
 		'Clean Code',
 		'C/C++', 
@@ -66,7 +67,6 @@ export const metadata: Metadata = {
 		'Performance',
 		'Accessibility',
 		'Minimalist Portfolio',
-		'Luke Brzozowski',
 	],
 	authors: [{ name: 'Luke Brzozowski' }],
 	creator: 'Luke Brzozowski',
