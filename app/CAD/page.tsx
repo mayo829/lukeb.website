@@ -4,8 +4,17 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { useState } from 'react';
 
+type Project = {
+    name: string;
+    mainImage: string;
+    description: string;
+    printTime: string;
+    material: string;
+    images: string[];
+};
+
 export default function PrintingProjectsPage() {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const projects = [
@@ -88,7 +97,7 @@ export default function PrintingProjectsPage() {
     }
   ];
 
-  const openProject = (project) => {
+  const openProject = (project: Project) => {
     setSelectedProject(project);
     setCurrentImageIndex(0);
   };
@@ -99,12 +108,14 @@ export default function PrintingProjectsPage() {
   };
 
   const nextImage = () => {
+    if (!selectedProject) return;
     setCurrentImageIndex((prev) => 
       prev === selectedProject.images.length - 1 ? 0 : prev + 1
     );
   };
 
   const prevImage = () => {
+    if (!selectedProject) return;
     setCurrentImageIndex((prev) => 
       prev === 0 ? selectedProject.images.length - 1 : prev - 1
     );
@@ -147,8 +158,11 @@ export default function PrintingProjectsPage() {
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                   onError={(e) => {
-                    e.target.style.display = 'none';
-                    e.target.nextSibling.style.display = 'flex';
+                    const target = e.target as HTMLElement;
+                    target.style.display = 'none';
+                    if (target.nextSibling) {
+                      (target.nextSibling as HTMLElement).style.display = 'flex';
+                    }
                   }}
                 />
                 {/* Fallback placeholder */}
@@ -208,7 +222,7 @@ export default function PrintingProjectsPage() {
         </div>
       </section>
 
-      {/* Keep the existing modal code unchanged */}
+      {/* Image Gallery Modal */}
       <AnimatePresence>
         {selectedProject && (
           <motion.div
@@ -252,8 +266,11 @@ export default function PrintingProjectsPage() {
                     fill
                     className="object-contain"
                     onError={(e) => {
-                      e.target.style.display = 'none';
-                      e.target.nextSibling.style.display = 'flex';
+                      const target = e.target as HTMLElement;
+                      target.style.display = 'none';
+                      if (target.nextSibling) {
+                        (target.nextSibling as HTMLElement).style.display = 'flex';
+                      }
                     }}
                   />
                   {/* Fallback for missing images */}
