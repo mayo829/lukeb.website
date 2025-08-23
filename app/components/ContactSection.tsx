@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 export default function ContactSection() {
   return (
-    <section className="ppy-12 md:py-20 bg-gradient-to-b from-blue-900/5 to-black">
+    <section className="ppy-12 md:py-20 bg-gradient-to-b from-purple-bright/7 to-black">
       <div className="max-w-3xl mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -32,12 +32,12 @@ const LocationInfo = () => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "0px 0px -100px 0px" }}
     transition={{ duration: 0.6, delay: 0.3 }}
-    className="flex items-center justify-center gap-2 text-cyan-400 mb-8"
+    className="flex items-center justify-center gap-2 text-purple-bright mb-4"
   >
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
     </svg>
-    <span className="font-inter">Ann Arbor, MI</span>
+    <span className="">Ann Arbor, MI</span>
   </motion.div>
 );
 
@@ -47,7 +47,7 @@ const ContactButtons = () => (
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true, margin: "0px 0px -100px 0px" }}
     transition={{ duration: 0.6, delay: 0.4 }}
-    className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
+    className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-4"
   >
     <ContactButton 
       href="mailto:lbrzozow@umich.edu" 
@@ -64,16 +64,27 @@ const ContactButtons = () => (
 );
 
 const ContactButton = ({ href, iconPath, text, target }: { href: string; iconPath: string; text: string; target?: string }) => (
-  <a
+  <motion.a
     href={href}
     target={target}
-    className="group flex items-center gap-2 px-6 py-3 bg-cyan-900/40 hover:bg-cyan-800/60 text-white rounded-full transition-all duration-100 border border-cyan-800/50 hover:border-cyan-400/50 w-full sm:w-auto"
+    initial={{ borderColor: "rgb(63,63,70)" }}
+    whileHover={{
+      scale: 1.05,
+      backgroundColor: "rgba(191, 64, 255, 0.15)", // purple-bright fade
+      borderColor: "#bf40ff"
+    }}
+    transition={{
+      scale: { duration: 0.15, ease: "easeOut" },
+      borderColor: { duration: 0.15, ease: "easeOut" },
+      backgroundColor: { duration: 0.6, ease: "easeInOut" }
+    }}
+    className="group flex items-center gap-2 px-6 py-3 bg-white/5 text-white rounded-full border transition-all w-full sm:w-auto"
   >
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
       <path d={iconPath} />
     </svg>
     <span>{text}</span>
-  </a>
+  </motion.a>
 );
 
 const SocialLinks = () => (
@@ -96,14 +107,25 @@ const SocialLinks = () => (
 );
 
 const SocialIcon = ({ href, iconPath }: { href: string; iconPath: string }) => (
-  <a 
+  <motion.a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
-    className="p-2 bg-cyan-900/40 hover:bg-cyan-800/60 rounded-full transition-all duration-100 border border-cyan-800/50 hover:border-cyan-400/50"
+    initial={{ borderColor: "rgb(63,63,70)" }}
+    whileHover={{
+      scale: 1.1,
+      backgroundColor: "rgba(191, 64, 255, 0.15)",
+      borderColor: "#bf40ff"
+    }}
+    transition={{
+      scale: { duration: 0.15, ease: "easeOut" },
+      borderColor: { duration: 0.15, ease: "easeOut" },
+      backgroundColor: { duration: 0.6, ease: "easeInOut" }
+    }}
+    className="p-2 bg-white/5 rounded-full border text-white transition-all"
   >
     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
       <path d={iconPath} />
     </svg>
-  </a>
+  </motion.a>
 );

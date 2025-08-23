@@ -135,7 +135,7 @@ export default function HeroSection() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-cyan-400 mb-8 px-4"
+          className="text-lg md:text-xl text-purple-bright mb-8 px-4"
         >
           Computer Engineer
         </motion.p>

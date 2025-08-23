@@ -81,7 +81,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <div className="min-h-screen bg-black">
+    <div className="min-h-screen bg-gradient-to-b from-black to-purple-bright/7">
       <section className="py-16 md:py-24 px-4 max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -124,7 +124,7 @@ export default function ProjectsSection() {
               
               <div className="flex flex-col p-8" style={{ minHeight: 'calc(100% - 192px)' }}>
                 <div className="flex-1">
-                  <h3 className="text-xl font-semibold mb-4 text-cyan-400 group-hover:text-zinc-100">
+                  <h3 className="text-xl font-semibold mb-4 text-purple-bright group-hover:text-zinc-100">
                     {project.title}
                   </h3>
                   <p className="text-zinc-400 text-sm leading-relaxed mb-8 group-hover:text-zinc-300">

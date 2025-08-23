@@ -15,6 +15,12 @@ export default {
         mono: ['var(--font-jetbrains-mono)']
         // hacker: ['var(--font-share-tech-mono)']
       },
+      colors: {
+        "purple-bright": "#bf40ff",
+      },
+      opacity: {
+        7: '0.07',
+      },
     },
   },
   plugins: [],

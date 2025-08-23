@@ -5,25 +5,25 @@ import { motion } from 'framer-motion';
 const skillCategories = [
   {
     title: 'Languages',
-    skills: ['C/C++', 'Python', 'TypeScript', 'Bash', 'SQL', 'SystemVerilog', 'Excel VBA', 'MATLAB']
+    skills: ['C/C++', 'Python', 'TypeScript', 'Bash', 'SQL', 'SystemVerilog', 'MATLAB']
   },
   {
     title: 'Technologies',
-    skills: ['Next.js', 'React', 'LangGraph', 'OpenAI API', 'Claude API', 'Docker', 'Arch Linux', 'Ubuntu', 'ESP32', 'Raspberry Pi', 'CAN bus', '3D printing', 'OOP', 'Flow Simulations', 'Algo Optimizations', 'Soldering']
+    skills: ['Next.js', 'React', 'Tailwind CSS', 'LangGraph', 'OpenAI API', 'Claude API', 'Docker', 'Arch Linux', 'Ubuntu', 'ESP32', 'Raspberry Pi', 'CAN bus', '3D printing', 'OOP', 'Algo Optimizations', 'Flow Simulations', 'Soldering']
   },
   {
     title: 'Tools',
-    skills: ['Git', 'Jira', 'Verdi', 'SolidWorks', 'Simulink', 'LaTeX', 'Arduino IDE', 'Oscilloscope', 'Tinkercad']
+    skills: ['Git', 'Jira', 'Verdi', 'Tinkercad', 'SolidWorks', 'Simulink', 'LaTeX', 'Arduino IDE', 'Oscilloscope']
   },
   {
     title: 'Interests',
-    skills: ['AI', 'Software Engineering', 'Systems Engineering', 'Game development', 'Performance Vehicles', 'Psychology', 'Rock Climbing', 'Nature']
+    skills: ['AI', 'Software Engineering', 'Systems Engineering', 'Game development', 'Web Design', 'Performance Vehicles', 'Psychology', 'Rock Climbing', 'Nature', 'Art']
   }
 ];
 
 export default function SkillsSection() {
   return (
-    <section className="py-12 md:py-20 bg-gradient-to-b from-black to-blue-900/5">
+    <section className="py-12 md:py-20 bg-purple-bright/7">
       <div className="max-w-7xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +51,7 @@ export default function SkillsSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: categoryIndex * 0.2 + 0.1 }}
-                className="text-xl md:text-2xl font-semibold text-cyan-400 text-center md:text-left"
+                className="text-xl md:text-2xl font-semibold text-purple-bright text-center md:text-left"
               >
                 {category.title}
               </motion.h3>
@@ -61,25 +61,27 @@ export default function SkillsSection() {
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill}
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, margin: "0px 0px -50px 0px" }}
-                    transition={{ 
-                      duration: 0.3, 
-                      delay: categoryIndex * 0.2 + skillIndex * 0.05,
-                      type: "spring",
-                      stiffness: 150,
-                      damping: 10
+                    initial={{
+                      opacity: 0,
+                      scale: 0.9,
+                      borderColor: "rgb(63, 63, 70)"
+                    }}
+                    animate={{
+                      opacity: 1,
+                      scale: 1,
+                      borderColor: "rgb(63, 63, 70)"
                     }}
                     whileHover={{
                       scale: 1.05,
-                      backgroundColor: 'rgba(34, 211, 238, 0.15)',
-                      borderColor: 'rgba(34, 211, 238, 0.5)',
-                      transition: { duration: 0.1 }
+                      backgroundColor: "rgba(191, 64, 255, 0.15)",
+                      borderColor: "#bf40ff"
                     }}
-                    className="group relative bg-white/5 rounded-lg p-3 md:p-4 text-center border border-cyan-900/30 hover:border-cyan-400/50 transition-colors duration-100"
+                    transition={{ 
+                      duration: 0.15,
+                    }}
+                    className="group relative bg-white/5 rounded-lg p-3 md:p-4 text-center border"
                   >
-                    <h4 className="text-sm md:text-sm font-medium text-white whitespace-nowrap group-hover:text-cyan-200">
+                    <h4 className="text-sm font-medium text-white whitespace-nowrap">
                       {skill}
                     </h4>
                   </motion.div>
