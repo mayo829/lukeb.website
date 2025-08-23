@@ -79,7 +79,7 @@ export default function SkillsSection() {
                     transition={{ 
                       duration: 0.15,
                     }}
-                    className="group relative bg-white/5 rounded-lg p-3 md:p-4 text-center border"
+                    className="group relative bg-zinc-900/50 rounded-lg p-3 md:p-4 text-center border"
                   >
                     <h4 className="text-sm font-medium text-white whitespace-nowrap">
                       {skill}

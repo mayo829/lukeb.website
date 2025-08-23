@@ -74,11 +74,9 @@ const ContactButton = ({ href, iconPath, text, target }: { href: string; iconPat
       borderColor: "#bf40ff"
     }}
     transition={{
-      scale: { duration: 0.15, ease: "easeOut" },
-      borderColor: { duration: 0.15, ease: "easeOut" },
-      backgroundColor: { duration: 0.6, ease: "easeInOut" }
+      duration: 0.15
     }}
-    className="group flex items-center gap-2 px-6 py-3 bg-white/5 text-white rounded-full border transition-all w-full sm:w-auto"
+    className="group flex items-center gap-2 px-6 py-3 bg-zinc-900/50 text-white rounded-full border transition-all w-full sm:w-auto"
   >
     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
       <path d={iconPath} />
@@ -118,11 +116,9 @@ const SocialIcon = ({ href, iconPath }: { href: string; iconPath: string }) => (
       borderColor: "#bf40ff"
     }}
     transition={{
-      scale: { duration: 0.15, ease: "easeOut" },
-      borderColor: { duration: 0.15, ease: "easeOut" },
-      backgroundColor: { duration: 0.6, ease: "easeInOut" }
+      duration: 0.15
     }}
-    className="p-2 bg-white/5 rounded-full border text-white transition-all"
+    className="p-2 bg-zinc-900/50 rounded-full border text-white transition-all"
   >
     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
       <path d={iconPath} />
