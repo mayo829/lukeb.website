@@ -81,7 +81,7 @@ const projects = [
 
 export default function ProjectsSection() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-black to-purple-bright/7">
+    <div className="min-h-screen bg-gradient-to-b from-black to-purple-bright/5">
       <section className="py-16 md:py-24 px-4 max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
