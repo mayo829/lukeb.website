@@ -58,7 +58,7 @@ export default function SkillsSection() {
 
               {/* Skills Grid */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
-                {category.skills.map((skill, skillIndex) => (
+                {category.skills.map((skill) => (
                   <motion.div
                     key={skill}
                     initial={{
