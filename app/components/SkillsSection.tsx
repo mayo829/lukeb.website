@@ -8,12 +8,12 @@ const skillCategories = [
     skills: ['C/C++', 'Python', 'TypeScript', 'Bash', 'SQL', 'SystemVerilog', 'MATLAB']
   },
   {
-    title: 'Technologies',
-    skills: ['Next.js', 'React', 'Tailwind CSS', 'LangGraph', 'OpenAI API', 'Claude API', 'Docker', 'Arch Linux', 'Ubuntu', 'ESP32', 'Raspberry Pi', 'CAN bus', '3D printing', 'OOP', 'Algo Optimizations', 'Flow Simulations', 'Soldering']
+    title: 'Frameworks & Technologies',
+    skills: ['Next.js', 'React', 'Tailwind CSS', 'LangGraph', 'OpenAI API', 'Claude API', 'Arch Linux', 'Ubuntu', 'ESP32', 'Raspberry Pi', 'CAN bus', 'OOP', 'Algo Optimizations', 'Flow Simulations']
   },
   {
     title: 'Tools',
-    skills: ['Git', 'Jira', 'Verdi', 'Tinkercad', 'SolidWorks', 'Simulink', 'LaTeX', 'Arduino IDE', 'Oscilloscope']
+    skills: ['Git', 'Jira', 'Docker', 'Verdi', 'Tinkercad', 'SolidWorks', '3D Printing', 'Arduino IDE', 'Simulink', 'LaTeX', 'Oscilloscope', 'Soldering']
   },
   {
     title: 'Interests',
