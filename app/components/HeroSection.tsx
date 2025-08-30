@@ -137,7 +137,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-purple-bright mb-8 px-4"
         >
-          Computer Engineer
+          Computer Engineer & Entrepreneur
         </motion.p>
         
         {/* <motion.div

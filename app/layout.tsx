@@ -38,12 +38,15 @@ const jetbrainsMono = JetBrains_Mono({
 // });
 
 export const metadata: Metadata = {
-	title: 'Luke Brzozowski - Computer Engineer',
+	title: 'Luke Brzozowski - Computer Engineer & Entrepreneur',
 	description:
-		'Welcome to my portfolio! I am a passionate Computer Engineer with a focus on clean, minimal, and effective solutions. I believe in the power of simplicity and thoughtful design to create impactful digital experiences.',
+		'Welcome to my portfolio! I am a passionate Computer Engineer and Entrepreneur with a focus on clean, minimal, and effective solutions. I believe in the power of simplicity and thoughtful design to create impactful digital experiences.',
 	keywords: [
 		'Luke Brzozowski',
+		'Luke Brzozowski portfolio',
+		'Brzozowski',
 		'Computer Engineer',
+		'portfolio',
 		'Clean Code',
 		'C/C++', 
 		'Python',
@@ -71,8 +74,8 @@ export const metadata: Metadata = {
 	authors: [{ name: 'Luke Brzozowski' }],
 	creator: 'Luke Brzozowski',
 	openGraph: {
-		title: 'Luke Brzozowski - Computer Engineer Portfolio',
-		description: 'Passionate Computer Engineer creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
+		title: 'Luke Brzozowski - Computer Engineer & Entrepreneur Portfolio',
+		description: 'Passionate Computer Engineer & Entrepreneur creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
 		url: 'https://lukeb.vercel.app/',
 		siteName: 'Luke Brzozowski - Portfolio',
 		images: [
@@ -88,8 +91,8 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: 'summary_large_image',
-		title: 'Luke Brzozowski - Computer Engineer',
-		description: 'Passionate Computer Engineer creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
+		title: 'Luke Brzozowski - Computer Engineer & Entrepreneur',
+		description: 'Passionate Computer Engineer & Entrepreneur creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
 		creator: '@yourusername',
 		images: ['/og-image.jpg'],
 	},

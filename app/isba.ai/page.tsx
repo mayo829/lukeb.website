@@ -17,7 +17,7 @@ export default function LinksPage() {
     },
     {
       name: 'Client Website',
-      url: 'https://reservation.isba.ai/',
+      url: 'https://copilot.isba.ai/',
       description: 'One of our clients website',
       icon: (
         <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">

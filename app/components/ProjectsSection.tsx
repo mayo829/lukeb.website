@@ -17,11 +17,11 @@ const projects = [
   {
     id: 2,
     title: 'isba.ai',
-    description: 'End-to-end AI hotel administrator that streamlines reservations, guest services, and operational management.',
+    description: 'ChatGPT without the hassle of typing long prompts or sharing screenshots.',
     link: '/isba.ai',
-    github: 'https://github.com/mayo829/reservation_system',
+    github: 'https://github.com/mayo829/ai-helper',
     buttonText: 'EXPLORE',
-    image: '/lisboa_hotels.png' // Add your image path here
+    image: '/isba.png' // Add your image path here
   },
   {
     id: 3,

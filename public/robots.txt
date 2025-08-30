@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://lukeb.vercel.app/
+
+# Sitemaps
+Sitemap: https://lukeb.vercel.app/sitemap.xml
