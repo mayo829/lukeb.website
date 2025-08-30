@@ -19,7 +19,7 @@ const projects = [
     title: 'isba.ai',
     description: 'ChatGPT without the hassle of typing long prompts or sharing screenshots.',
     link: '/isba.ai',
-    github: 'https://github.com/mayo829/ai-helper',
+    github: 'https://github.com/mayo829/copilot.isba.ai',
     buttonText: 'EXPLORE',
     image: '/isba.png' // Add your image path here
   },
