@@ -7,7 +7,7 @@ export default function LinksPage() {
   const links = [
     {
       name: 'Project GitHub',
-      url: 'https://github.com/mayo829/reservation_system',
+      url: 'https://github.com/mayo829/copilot.isba.ai',
       description: 'Source code and documentation',
       icon: (
         <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">

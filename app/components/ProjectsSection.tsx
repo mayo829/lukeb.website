@@ -19,7 +19,7 @@ const projects = [
     title: 'isba.ai',
     description: 'ChatGPT without the hassle of typing long prompts or sharing screenshots.',
     link: '/isba.ai',
-    github: 'https://github.com/mayo829/ai-helper',
+    github: 'https://github.com/mayo829/copilot.isba.ai',
     buttonText: 'EXPLORE',
     image: '/isba.png' // Add your image path here
   },
@@ -82,7 +82,7 @@ const projects = [
 export default function ProjectsSection() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-black to-purple-bright/5">
-      <section className="py-16 md:py-24 px-4 max-w-7xl mx-auto">
+      <section id="projects" className="py-16 md:py-24 px-4 max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
