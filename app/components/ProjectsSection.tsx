@@ -8,7 +8,7 @@ const projects = [
   {
     id: 1,
     title: 'AgenticFruit',
-    description: 'AI Coding Agent For Web Applications with intelligent code generation and automated testing capabilities.',
+    description: 'AI-powered website builder and manager for small businesses and creators, with seamless backend integration and optimized SEO/GEO-targeting.',
     link: 'https://www.agenticfruit.com/',
     github: 'https://github.com/mayo829/AICoder',
     buttonText: 'USE NOW',
@@ -25,21 +25,21 @@ const projects = [
   },
   {
     id: 3,
-    title: 'CAD & 3D Printing',
-    description: 'Advanced CAD modeling projects and 3D printing designs covering mechanical components and prototypes.',
-    link: '/CAD',
-    github: 'https://github.com/mayo829/3d_printing',
-    buttonText: 'VIEW DESIGNS',
-    image: '/3d_printing.jpg' // Add your image path here
-  },
-  {
-    id: 4,
     title: 'Microprocessor',
     description: 'Synthesizable RISC-V microprocessor with dynamic scheduling and advanced pipeline architecture.',
     link: '/470_project',
     image: '/cpu.jpg',
     github: 'https://github.com/mayo829/RISCV_CPU',
     buttonText: 'LEARN MORE'
+  },
+  {
+    id: 4,
+    title: 'CAD & 3D Printing',
+    description: 'Advanced CAD modeling projects and 3D printing designs covering mechanical components and prototypes.',
+    link: '/CAD',
+    github: 'https://github.com/mayo829/3d_printing',
+    buttonText: 'VIEW DESIGNS',
+    image: '/3d_printing.jpg' // Add your image path here
   },
   {
     id: 5,

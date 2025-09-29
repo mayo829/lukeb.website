@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 const skillCategories = [
   {
     title: 'Languages',
-    skills: ['C/C++', 'Python', 'TypeScript', 'Bash', 'SQL', 'SystemVerilog', 'MATLAB']
+    skills: ['C/C++', 'Python', 'TypeScript', 'Bash', 'SQL', 'SystemVerilog', 'ARMv7‑M Assembly', 'MATLAB']
   },
   {
     title: 'Frameworks & Technologies',
@@ -13,7 +13,7 @@ const skillCategories = [
   },
   {
     title: 'Tools',
-    skills: ['Git', 'Jira', 'Docker', 'Verdi', 'Tinkercad', 'SolidWorks', '3D Printing', 'Arduino IDE', 'Simulink', 'LaTeX', 'Oscilloscope', 'Soldering']
+    skills: ['Git', 'Jira', 'Docker', 'Verdi', 'Logic Analyzer', 'Tinkercad', 'SolidWorks', '3D Printing', 'Arduino IDE', 'Simulink', 'LaTeX', 'Oscilloscope', 'Soldering']
   },
   {
     title: 'Interests',
