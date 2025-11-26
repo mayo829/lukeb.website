@@ -4,8 +4,9 @@ import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
 import { Particles } from "./particles";
 import { VignetteShader } from "./shaders/vignetteShader";
+import { memo } from 'react';
 
-export const GL = ({ hovering }: { hovering: boolean }) => {
+export const GL = memo(({ hovering }: { hovering: boolean }) => {
   const {
     speed,
     focus,
@@ -80,4 +81,4 @@ export const GL = ({ hovering }: { hovering: boolean }) => {
       </Canvas>
     </div>
   );
-};
+});
