@@ -21,7 +21,9 @@
 @layer base {
   :root {
     --font-bodoni: var(--font-bodoni-egyptian), serif;
-    --font-mono: var(--font-geist-mono), monospace;
+    
+    --font-mono: var(--font-geist-mono);
+    --font-sentient: 'Sentient', sans-serif;
   }
   
   html, body {

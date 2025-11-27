@@ -24,17 +24,19 @@ export default function HeroSection() {
     checkMobile();
     window.addEventListener('resize', checkMobile);
     
+    // Track cursor position
+    const handleMouseMove = (e: MouseEvent) => {
+      x.set(e.clientX / window.innerWidth - 0.5);
+      y.set(e.clientY / window.innerHeight - 0.5);
+    };
+    
+    window.addEventListener('mousemove', handleMouseMove);
+    
     return () => {
       window.removeEventListener('resize', checkMobile);
+      window.removeEventListener('mousemove', handleMouseMove);
     };
-  }, []);
-  
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    x.set((e.clientX - rect.left) / rect.width - 0.5);
-    y.set((e.clientY - rect.top) / rect.height - 0.5);
-  };
-  
+  }, [x, y]);
 
   return (
     <motion.section
@@ -66,6 +68,8 @@ export default function HeroSection() {
             scale: 1.05,
             transition: { duration: 0.2 }
           }}
+          onMouseEnter={() => setHovering(true)}
+          onMouseLeave={() => setHovering(false)}
         >
           Luke Brzozowski
         </motion.h1>
@@ -74,7 +78,7 @@ export default function HeroSection() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-purple-bright mb-8 px-4"
+          className="text-lg md:text-xl text-purple-bright mb-8 px-4 font-mono"
         >
           Computer Engineer & Entrepreneur
         </motion.p>
