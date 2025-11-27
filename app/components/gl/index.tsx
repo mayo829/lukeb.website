@@ -4,9 +4,8 @@ import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
 import { Particles } from "./particles";
 import { VignetteShader } from "./shaders/vignetteShader";
-import { memo } from 'react';
 
-export const GL = memo(({ hovering }: { hovering: boolean }) => {
+export const GL = ({ hovering }: { hovering: boolean }) => {
   const {
     speed,
     focus,
@@ -43,8 +42,9 @@ export const GL = memo(({ hovering }: { hovering: boolean }) => {
     manualTime: { value: 0, min: 0, max: 50, step: 0.01 },
   });
   return (
-    <div id="webgl">
+    <div style={{ width: '100%', height: '100%', pointerEvents: 'none' }}>
       <Canvas
+        style={{ width: '100%', height: '100%' }}
         camera={{
           position: [
             1.2629783123314589, 2.664606471394044, -1.8178993743288914,
@@ -81,4 +81,4 @@ export const GL = memo(({ hovering }: { hovering: boolean }) => {
       </Canvas>
     </div>
   );
-});
+};

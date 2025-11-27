@@ -13,8 +13,8 @@ export default function HeroSection() {
   const y = useMotionValue(0);
   
   // Transform motion values for tilt
-  const rotateX = useTransform(y, [-0.5, 0.5], [5, -5]); // Reduced from 10 to 5 for subtlety
-  const rotateY = useTransform(x, [-0.5, 0.5], [-5, 5]); // Reduced from 10 to 5 for subtlety
+  const rotateX = useTransform(y, [-0.5, 0.5], [5, -5]);
+  const rotateY = useTransform(x, [-0.5, 0.5], [-5, 5]);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -29,7 +29,6 @@ export default function HeroSection() {
     };
   }, []);
   
-  // Add this handler directly to the section
   const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
     x.set((e.clientX - rect.left) / rect.width - 0.5);
@@ -43,14 +42,14 @@ export default function HeroSection() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="h-screen flex items-center justify-center relative overflow-hidden bg-[#000000]"
+      style={{ touchAction: 'pan-y' }} // Add this to allow scrolling
     >
-      <div className="absolute inset-0 z-0 pointer-events-none">
+      <div className="absolute inset-0 z-0" style={{ pointerEvents: 'none' }}>
         <GL hovering={hovering} />
       </div>
 
       {/* Content remains identical on all devices */}
       <div className="relative z-10 text-center">
-        {/* <GL hovering={hovering} /> */}
         <motion.h1
           initial={{ y: 50 }}
           animate={{ y: 0 }}
@@ -61,11 +60,11 @@ export default function HeroSection() {
             rotateY,
             transformPerspective: 1000,
             transformStyle: "preserve-3d",
-            transition: "transform 0.1s linear" // Add this for smoother movement
+            transition: "transform 0.1s linear"
           }}
           whileHover={{
             scale: 1.05,
-            transition: { duration: 0.2 } // Make hover faster
+            transition: { duration: 0.2 }
           }}
         >
           Luke Brzozowski
@@ -79,8 +78,6 @@ export default function HeroSection() {
         >
           Computer Engineer & Entrepreneur
         </motion.p>
-        
-        
       </div>
 
       <motion.div
