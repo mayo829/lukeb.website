@@ -73,8 +73,8 @@ export default function SkillsSection() {
                     }}
                     whileHover={{
                       scale: 1.05,
-                      backgroundColor: "rgba(191, 64, 255, 0.15)",
-                      borderColor: "#bf40ff"
+                      backgroundColor: "rgba(7, 183, 237, 0.15)",
+                      borderColor: "#07b7ed"
                     }}
                     transition={{ 
                       duration: 0.15,

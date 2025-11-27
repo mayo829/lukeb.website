@@ -70,8 +70,8 @@ const ContactButton = ({ href, iconPath, text, target }: { href: string; iconPat
     initial={{ borderColor: "rgb(63,63,70)" }}
     whileHover={{
       scale: 1.05,
-      backgroundColor: "rgba(191, 64, 255, 0.15)", // purple-bright fade
-      borderColor: "#bf40ff"
+      backgroundColor: "rgba(7, 183, 237, 0.15)", // purple-bright fade
+      borderColor: "#11d3fa"
     }}
     transition={{
       duration: 0.15
@@ -112,8 +112,8 @@ const SocialIcon = ({ href, iconPath }: { href: string; iconPath: string }) => (
     initial={{ borderColor: "rgb(63,63,70)" }}
     whileHover={{
       scale: 1.1,
-      backgroundColor: "rgba(191, 64, 255, 0.15)",
-      borderColor: "#bf40ff"
+      backgroundColor: "rgba(7, 183, 237, 0.15)", // purple-bright fade
+      borderColor: "#11d3fa"
     }}
     transition={{
       duration: 0.15

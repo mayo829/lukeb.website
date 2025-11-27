@@ -16,7 +16,9 @@ export default {
         // hacker: ['var(--font-share-tech-mono)']
       },
       colors: {
-        "purple-bright": "#bf40ff",
+        // "purple-bright": "#bf40ff",
+        "purple-bright": "#11d3fa",
+        "cyan-background": "rgba(7, 183, 237, 0.15)"
       },
       opacity: {
         7: '0.07',

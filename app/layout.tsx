@@ -40,7 +40,7 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
 	title: 'Luke Brzozowski - Computer Engineer & Entrepreneur',
 	description:
-		'Welcome to my portfolio! I am a passionate Computer Engineer and Entrepreneur with a focus on clean, minimal, and effective solutions. I believe in the power of simplicity and thoughtful design to create impactful digital experiences.',
+		'Welcome to my portfolio! I am a passionate Computer Engineer and Entrepreneur with a focus on clean, minimal, and effective solutions that impacts the world. I believe in the power of simplicity and thoughtful design to create impactful digital experiences.',
 	keywords: [
 		'Luke Brzozowski',
 		'Luke Brzozowski portfolio',
