@@ -56,7 +56,7 @@ export default function HeroSection() {
           initial={{ y: 50 }}
           animate={{ y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-7xl font-sentient font-bold mb-6 bg-clip-text text-white"
+          className="text-4xl md:text-7xl font-inter font-bold mb-6 bg-clip-text text-white"
           style={{
             rotateX,
             rotateY,
@@ -78,7 +78,7 @@ export default function HeroSection() {
           initial={{ y: 50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-text-bright mb-8 px-4 font-mono"
+          className="text-lg md:text-xl text-purple-bright mb-8 px-4 font-mono"
         >
           Computer Engineer & Entrepreneur
         </motion.p>
