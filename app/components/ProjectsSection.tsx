@@ -76,6 +76,15 @@ const projects = [
     link: 'https://www.solidworks.com/',
     github: 'https://github.com/mayo829',
     buttonText: 'VIEW SIMULATION' // Add this line
+  },
+  {
+    id: 9,
+    title: 'Image Generator',
+    description: 'AI pipeline converting product catalogs to studio‑grade images with 99% accuracy, negligible hallucinations, and 1s/item throughput',
+    image: '/generated_image.png',
+    link: '/catelog_to_image',
+    github: 'https://github.com/mayo829',
+    buttonText: 'VIEW PROJECT' // Add this line
   }
 ];
 
