@@ -5,7 +5,7 @@ import { GL } from "./gl";
 import { useEffect, useState } from 'react';
 
 export default function HeroSection() {
-  const [isMobile, setIsMobile] = useState(false);
+  // const [isMobile, setIsMobile] = useState(false);
   const [hovering, setHovering] = useState(false);
   
   // Motion values for tilt effect
@@ -17,12 +17,12 @@ export default function HeroSection() {
   const rotateY = useTransform(x, [-0.5, 0.5], [-5, 5]);
 
   useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
+    // const checkMobile = () => {
+    //   setIsMobile(window.innerWidth < 768);
+    // };
     
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
+    // checkMobile();
+    // window.addEventListener('resize', checkMobile);
     
     // Track cursor position
     const handleMouseMove = (e: MouseEvent) => {
@@ -33,7 +33,7 @@ export default function HeroSection() {
     window.addEventListener('mousemove', handleMouseMove);
     
     return () => {
-      window.removeEventListener('resize', checkMobile);
+      // window.removeEventListener('resize', checkMobile);
       window.removeEventListener('mousemove', handleMouseMove);
     };
   }, [x, y]);

@@ -1,4 +1,4 @@
-import { Perf } from "r3f-perf";
+// import { Perf } from "r3f-perf";
 import { Effects } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useControls } from "leva";
