@@ -12,7 +12,7 @@ const projects = [
     link: 'https://www.agenticfruit.com/',
     github: 'https://github.com/mayo829/AICoder',
     buttonText: 'USE NOW',
-    image: '/agenticfruit.png' // Add your image path here
+    image: '/agenticfruit.png'
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projects = [
     link: '/isba.ai',
     github: 'https://github.com/mayo829/copilot.isba.ai',
     buttonText: 'EXPLORE',
-    image: '/isba.png' // Add your image path here
+    image: '/isba.png'
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const projects = [
     link: '/CAD',
     github: 'https://github.com/mayo829/3d_printing',
     buttonText: 'VIEW DESIGNS',
-    image: '/3d_printing.jpg' // Add your image path here
+    image: '/3d_printing.jpg'
   },
   {
     id: 5,
@@ -48,7 +48,7 @@ const projects = [
     link: '/led_chessboard',
     github: 'https://github.com/mayo829/3d_printing',
     buttonText: 'VIEW PROJECT',
-    image: '/led_chessboard/IMG_9463.jpg' // Add your image path here
+    image: '/led_chessboard/IMG_9463.jpg'
   },
   {
     id: 6,
@@ -57,7 +57,7 @@ const projects = [
     link: 'https://www.example.com',
     github: 'https://github.com/mayo829/piazza_post_categorizer',
     buttonText: 'VIEW PROJECT',
-    image: '/code.jpg' // Add your image path here
+    image: '/code.jpg'
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ const projects = [
     link: 'https://www.example.com',
     github: 'https://github.com/mayo829',
     buttonText: 'DISCOVER',
-    image: '/arduino.jpg' // Add your image path here
+    image: '/arduino.jpg'
   },
   {
     id: 8,
@@ -75,7 +75,7 @@ const projects = [
     image: '/circuit.jpg',
     link: 'https://www.example.com',
     github: 'https://github.com/mayo829',
-    buttonText: 'VIEW PROJECT' // Add this line
+    buttonText: 'VIEW PROJECT'
   },
   {
     id: 9,
@@ -84,16 +84,16 @@ const projects = [
     image: '/CFD.jpg',
     link: 'https://www.solidworks.com/',
     github: 'https://github.com/mayo829',
-    buttonText: 'VIEW SIMULATION' // Add this line
+    buttonText: 'VIEW SIMULATION'
   },
   {
     id: 10,
     title: 'Image Generator',
     description: 'AI pipeline converting product catalogs to studio‑grade images with 99% accuracy, negligible hallucinations, and 1s/item throughput',
     image: '/generated_image.png',
-    link: '/catelog_to_image',
+    link: '/agenticfruit/catelog_to_image',
     github: 'https://github.com/mayo829',
-    buttonText: 'VIEW PROJECT' // Add this line
+    buttonText: 'VIEW PROJECT'
   }
 ];
 
@@ -179,6 +179,28 @@ export default function ProjectsSection() {
             </motion.div>
           ))}
         </div>
+
+        {/* View All Projects Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-16 flex justify-center"
+        >
+          <Link
+            href="/projects"
+            className="group relative px-8 py-4 bg-zinc-900/50 text-white font-medium rounded-lg border border-zinc-700 transition-all duration-150 hover:scale-105 hover:bg-[#07b7ed26] hover:border-[#07b7ed]"
+
+          >
+            <span className="flex items-center gap-2">
+              View All Projects
+              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </span>
+          </Link>
+        </motion.div>
       </section>
     </div>
   );
