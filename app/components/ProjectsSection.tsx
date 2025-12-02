@@ -189,7 +189,7 @@ export default function ProjectsSection() {
           className="mt-16 flex justify-center"
         >
           <Link
-            href="/projects"
+            href="/all"
             className="group relative px-8 py-4 bg-zinc-900/50 text-white font-medium rounded-lg border border-zinc-700 transition-all duration-150 hover:scale-105 hover:bg-[#07b7ed26] hover:border-[#07b7ed]"
 
           >
