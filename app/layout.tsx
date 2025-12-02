@@ -37,64 +37,113 @@ const jetbrainsMono = JetBrains_Mono({
 // 	display: 'swap',
 // });
 
+const baseUrl = 'https://lukeb.vercel.app';
+
 export const metadata: Metadata = {
-	title: 'Luke Brzozowski - Computer Engineer & Entrepreneur',
+	metadataBase: new URL(baseUrl),
+	title: {
+		default: 'Luke Brzozowski - Computer Engineer & Entrepreneur',
+		template: '%s | Luke Brzozowski',
+	},
 	description:
-		'Welcome to my portfolio! I am a passionate Computer Engineer and Entrepreneur with a focus on clean, minimal, and effective solutions that impacts the world. I believe in the power of simplicity and thoughtful design to create impactful digital experiences.',
+		'Welcome to my portfolio! I am a passionate Computer Engineer and Entrepreneur with a focus on clean, minimal, and effective solutions that impact the world. I believe in the power of simplicity and thoughtful design to create impactful digital experiences.',
 	keywords: [
 		'Luke Brzozowski',
 		'Luke Brzozowski portfolio',
 		'Brzozowski',
 		'Computer Engineer',
-		'portfolio',
+		'Software Engineer',
+		'Entrepreneur',
+		'Portfolio',
 		'Clean Code',
-		'C/C++', 
+		'C/C++',
 		'Python',
-		'Bash', 
-		'SystemVerilog', 
-		'TypeScript', 
-		'Git', 
-		'LaTeX', 
-		'Linux', 
-		'Matlab', 
-		'Arduino IDE', 
-		'Docker', 
-		'Verdi', 
-		'SolidWorks', 
+		'Bash',
+		'SystemVerilog',
+		'TypeScript',
+		'React',
+		'Next.js',
+		'Git',
+		'LaTeX',
+		'Linux',
+		'Matlab',
+		'Arduino IDE',
+		'Docker',
+		'Verdi',
+		'SolidWorks',
 		'Microsoft 365',
 		'Minimal Design',
 		'Modern Development',
 		'User Experience',
 		'Design Systems',
-		'TypeScript',
 		'Performance',
 		'Accessibility',
 		'Minimalist Portfolio',
+		'Web Development',
+		'Full Stack Developer',
 	],
 	authors: [{ name: 'Luke Brzozowski' }],
 	creator: 'Luke Brzozowski',
+	publisher: 'Luke Brzozowski',
+	applicationName: 'Luke Brzozowski Portfolio',
+	category: 'Portfolio',
+	classification: 'Portfolio Website',
+	referrer: 'origin-when-cross-origin',
+	colorScheme: 'dark',
+	themeColor: [
+		{ media: '(prefers-color-scheme: light)', color: '#ffffff' },
+		{ media: '(prefers-color-scheme: dark)', color: '#18181b' },
+	],
+	icons: {
+		icon: [
+			{ url: '/favicon.ico', sizes: 'any' },
+			{ url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+			{ url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+		],
+		apple: [
+			{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+		],
+		other: [
+			{
+				rel: 'mask-icon',
+				url: '/safari-pinned-tab.svg',
+				color: '#18181b',
+			},
+		],
+	},
+	manifest: '/manifest.json', // Web App Manifest for PWA support
+	alternates: {
+		canonical: baseUrl,
+		languages: {
+			'en-US': baseUrl,
+		},
+	},
 	openGraph: {
-		title: 'Luke Brzozowski - Computer Engineer & Entrepreneur Portfolio',
-		description: 'Passionate Computer Engineer & Entrepreneur creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
-		url: 'https://lukeb.vercel.app/',
+		type: 'website',
+		locale: 'en_US',
+		url: baseUrl,
 		siteName: 'Luke Brzozowski - Portfolio',
+		title: 'Luke Brzozowski - Computer Engineer & Entrepreneur Portfolio',
+		description:
+			'Passionate Computer Engineer & Entrepreneur creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
 		images: [
 			{
-				url: '/og-image.jpg',
+				url: '/motherboard.jpg',
 				width: 1200,
 				height: 630,
 				alt: 'Luke Brzozowski - Modern Minimal Portfolio',
+				type: 'image/jpeg',
 			},
 		],
-		locale: 'en_US',
-		type: 'website',
 	},
 	twitter: {
 		card: 'summary_large_image',
 		title: 'Luke Brzozowski - Computer Engineer & Entrepreneur',
-		description: 'Passionate Computer Engineer & Entrepreneur creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
-		creator: '@yourusername',
-		images: ['/og-image.jpg'],
+		description:
+			'Passionate Computer Engineer & Entrepreneur creating clean, minimal, and effective digital solutions. Explore my work and development philosophy.',
+		creator: '@yourusername', // Update with your actual Twitter handle
+		site: '@yourusername', // Update with your actual Twitter handle
+		images: ['/motherboard.jpg'], // Use the same image as OpenGraph
 	},
 	robots: {
 		index: true,
@@ -107,6 +156,22 @@ export const metadata: Metadata = {
 			'max-snippet': -1,
 		},
 	},
+	verification: {
+		// Add your verification codes when available
+		// google: 'your-google-verification-code',
+		// yandex: 'your-yandex-verification-code',
+		// yahoo: 'your-yahoo-verification-code',
+		// other: {
+		//   'msvalidate.01': 'your-bing-verification-code',
+		// },
+	},
+	formatDetection: {
+		telephone: false,
+		date: false,
+		address: false,
+		email: false,
+		url: false,
+	},
 };
 
 export default function RootLayout({
@@ -116,6 +181,62 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en" className={`${inter.variable} ${bodoniEgyptian.variable} ${jetbrainsMono.variable}`}>
+			<head>
+				{/* Structured Data for SEO */}
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							'@context': 'https://schema.org',
+							'@type': 'Person',
+							name: 'Luke Brzozowski',
+							jobTitle: 'Computer Engineer & Entrepreneur',
+							url: baseUrl,
+							sameAs: [
+								// Add your social media profiles here
+								// 'https://github.com/yourusername',
+								// 'https://linkedin.com/in/yourusername',
+								// 'https://twitter.com/yourusername',
+							],
+							knowsAbout: [
+								'Computer Engineering',
+								'Software Development',
+								'Web Development',
+								'TypeScript',
+								'Python',
+								'C/C++',
+								'SystemVerilog',
+								'Linux',
+								'Docker',
+							],
+						}),
+					}}
+				/>
+				{/* Website Structured Data */}
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: JSON.stringify({
+							'@context': 'https://schema.org',
+							'@type': 'WebSite',
+							name: 'Luke Brzozowski - Portfolio',
+							url: baseUrl,
+							author: {
+								'@type': 'Person',
+								name: 'Luke Brzozowski',
+							},
+							potentialAction: {
+								'@type': 'SearchAction',
+								target: {
+									'@type': 'EntryPoint',
+									urlTemplate: `${baseUrl}/projects?q={search_term_string}`,
+								},
+								'query-input': 'required name=search_term_string',
+							},
+						}),
+					}}
+				/>
+			</head>
 			<body className={`${jetbrainsMono.className} antialiased`}>
 				{children}
 				<Analytics />

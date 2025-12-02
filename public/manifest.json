@@ -1,0 +1,27 @@
+{
+  "name": "Luke Brzozowski - Portfolio",
+  "short_name": "Luke B. Portfolio",
+  "description": "Computer Engineer & Entrepreneur Portfolio - Clean, minimal, and effective digital solutions",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#18181b",
+  "theme_color": "#18181b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/motherboard.jpg",
+      "sizes": "180x180",
+      "type": "image/jpg",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["portfolio", "business", "technology"],
+  "lang": "en-US",
+  "dir": "ltr"
+}
+
