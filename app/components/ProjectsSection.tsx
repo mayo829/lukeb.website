@@ -43,6 +43,15 @@ const projects = [
   },
   {
     id: 5,
+    title: 'LED Chessboard',
+    description: 'Embedded system that lights up possible moves on a chessboard.',
+    link: '/led_chessboard',
+    github: 'https://github.com/mayo829/3d_printing',
+    buttonText: 'VIEW PROJECT',
+    image: '/led_chessboard/IMG_9463.jpg' // Add your image path here
+  },
+  {
+    id: 6,
     title: 'Piazza Post Categorizer',
     description: 'Machine Learning based classifier for online forum posts using natural language processing techniques.',
     link: 'https://www.example.com',
@@ -51,7 +60,7 @@ const projects = [
     image: '/code.jpg' // Add your image path here
   },
   {
-    id: 6,
+    id: 7,
     title: 'NASA Mars Rover',
     description: 'Prototype of NASA Mars Rover with collision avoidance algorithms and precision robotic arm control.',
     link: 'https://www.example.com',
@@ -60,7 +69,7 @@ const projects = [
     image: '/arduino.jpg' // Add your image path here
   },
   {
-    id: 7,
+    id: 8,
     title: 'Accelerometer Data Logger',
     description: 'Real-time 3-axis acceleration data logger with cloud upload',
     image: '/circuit.jpg',
@@ -69,7 +78,7 @@ const projects = [
     buttonText: 'VIEW PROJECT' // Add this line
   },
   {
-    id: 8,
+    id: 9,
     title: 'Venturi Design and Simulation',
     description: 'CFD simulations of variable Venturi geometries for optimized airflow',
     image: '/CFD.jpg',
@@ -78,7 +87,7 @@ const projects = [
     buttonText: 'VIEW SIMULATION' // Add this line
   },
   {
-    id: 9,
+    id: 10,
     title: 'Image Generator',
     description: 'AI pipeline converting product catalogs to studio‑grade images with 99% accuracy, negligible hallucinations, and 1s/item throughput',
     image: '/generated_image.png',
