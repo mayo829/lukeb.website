@@ -89,11 +89,6 @@ export const metadata: Metadata = {
 	category: 'Portfolio',
 	classification: 'Portfolio Website',
 	referrer: 'origin-when-cross-origin',
-	colorScheme: 'dark',
-	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: '#ffffff' },
-		{ media: '(prefers-color-scheme: dark)', color: '#18181b' },
-	],
 	icons: {
 		icon: [
 			{ url: '/favicon.ico', sizes: 'any' },

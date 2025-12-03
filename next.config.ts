@@ -1,16 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  async redirects() {
-    return [
-      {
-        source: "/:projectid((?!_next|favicon.ico|robots.txt|sitemap.xml|icon|apple|android|.*\\.png|.*\\.jpg|.*\\.jpeg|.*\\.svg).+)",
-        destination: "/projects/:projectid",
-        permanent: true,
-      },
-    ];
-  }
-  
+  // No redirects - all project routes are already under /projects
+  // If you need specific redirects, add them explicitly one by one
 };
 
 export default nextConfig;
