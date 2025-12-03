@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://lukeb.vercel.app/projects/end_470_project</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/projects/470_project</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/projects/isba.ai</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/robots.txt</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/projects/CAD</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/projects/led_chessboard</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/sitemap.xml</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/projects/agenticfruit/catelog_to_image</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app/projects/all</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
-<url><loc>https://lukeb.vercel.app</loc><lastmod>2025-12-02T18:23:10.523Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/projects/CAD</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/robots.txt</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/sitemap.xml</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/projects/470_project</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/projects/all</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/projects/led_chessboard</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/projects/isba.ai</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app/projects/agenticfruit/catelog_to_image</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+<url><loc>https://lukeb.vercel.app</loc><lastmod>2025-12-03T01:13:27.814Z</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
 </urlset>
